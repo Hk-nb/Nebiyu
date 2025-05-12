@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheger shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-tshirt"></i>
+            <span>Sheger</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">About</a></li>
+                <li><a href="co.html">Contact</a></li>
+                <li><a href="images.html">Gallary</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <div id="google_translate_element"></div>
+        </nav>
+
+    </header>
+    <section class="hero">
+        <h1>Sheger shop</h1>
+        <p>Discover our Cultural Clothes and elevate your style with premium quality clothing</p>
+        <a href="#" class="btn">Shop Now</a>
+    </section>
+    <section class="categories">
+        <div class="section-title">
+            <h2>Shop by Category</h2>
+            <p>Browse our wide selection of clothing categories to find exactly what you're looking for</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="63274eef-af4b-4c99-b01e-0bddbede2e9e.png">
+                </div>
+                <div class="category-info">
+                    <h3>For Men's</h3>
+                    <a href="m.html" class="btn">View Clothes</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="Gemini_Generated_Image_1vb6691vb6691vb6.jpeg" alt="Women's Fashion">
+                </div>
+                <div class="category-info">
+                    <h3>For Women's</h3>
+                    <a href="wo.html" class="btn">View Clothes</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="Baby.png">
+                </div>
+                <div class="category-info">
+                    <h3>For Kids'</h3>
+                    <a href="k.html" class="btn">View Clothes</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://www.uneca.org/eca-events/sites/default/files/externals/d/8/d88ff667748c1306d90bf6360d886831.jpg">
+                </div>
+                <div class="category-info">
+                    <h3>Other products</h3>
+                    <a href="ot.html" class="btn">View Clothes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates on new products and upcoming sales</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>sheger</h3>
+                <p>Your premier destination for high-quality fashion and accessories since 2010.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="m.html">Men's Cloth</a></li>
+                    <li><a href="wo.html">Women's Cloth</a></li>
+                    <li><a href="k.html">Kids' Cloth</a></li>
+                    <li><a href="ot.html">Other Product</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="co.html">Contact Us</a></li>
+                    <li><a href="service.html">Our service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="dev'ters.html">About Developers of this web</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2010 Sheger Cltural clothe Boutique.</p>
+            <h2 class="caution">This website is a sample of our job what we learn at school and this is not the true shop therfore don't waste your time here </h2>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartCount = document.querySelector('.cart-count');
+            let count = parseInt(cartCount.textContent);
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    count++;
+                    cartCount.textContent = count;
+                    
+                   
+                    cartCount.style.transform = 'scale(1.5)';
+                    setTimeout(() => {
+                        cartCount.style.transform = 'scale(1)';
+                    }, 300);
+                    
+                  
+                    console.log('Product added to cart!');
+                });
+            });
+            
+       
+            const wishlistButtons = document.querySelectorAll('.wishlist');
+            wishlistButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas', 'text-danger');
+                    } else {
+                        icon.classList.remove('fas', 'text-danger');
+                        icon.classList.add('far');
+                    }
+                });
+            });
+            
+        
+            const newsletterForm = document.querySelector('.newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input').value;
+                alert(`Thank you for subscribing with ${email}!`);
+                this.querySelector('input').value = '';
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en', 
+            includedLanguages: 'en,am,',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
+      <div id="google_translate_element"></div>
+      
+</body>
+</html>

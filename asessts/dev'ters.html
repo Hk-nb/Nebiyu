@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Contact Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #5e5c5c;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #007BFF;
+      padding: 10px 20px;
+      color: rgb(248, 245, 245);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: rgb(91, 66, 66);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      color: #d7c5c5;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .photo-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .photo-group img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #007BFF;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto 30px;
+    }
+
+    .input-group input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #f8f5f5;
+      border-radius: 5px;
+    }
+
+    .entry-list {
+      margin-top: 30px;
+    }
+
+    .entry {
+      background: #817e7e;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .entry h4 {
+      margin: 0 0 5px;
+      color: #333;
+    }
+
+    .entry p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    #google_translate_element select {
+      padding: 4px;
+      border-radius: 5px;
+    }
+
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #555;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div id="google_translate_element"></div>
+    <div></div>
+  </nav>
+
+  <div class="container">
+    <div class="intro">
+      <p>This Web page is developed by Lem general secondary school grade 11 students and hosted by Nebiyu Lebena and Samuel Fikru</p>
+    </div>
+    <div class="profile">
+      <div class="photo-group">
+        <img src="ho.jpg" alt="Image 1">
+        <img src="ho2.jpg" alt="Image 2">
+      </div>
+    </div>
+    <div class="entry-list">
+      <div class="entry"><h4>Nebiyu Lebena </h4><p>Email:lovenaba702@gmail.com</p><p>Phone: +251948000460</p></div>
+      <div class="entry"><h4>Samuel Fikru</h4><p>Email: samuelfikru369@gmail.com</p><p>Phone: +251911234567</p></div>
+      <div class="entry"><h4>Tibebu Menkir</h4><p>Email: tibebumenkir39@gmail.com</p><p>Phone: +251984187439</p></div>
+      <div class="entry"><h4>Rahel Tesfaye</h4><p>Email: sebrianAbdu2000@gmail.com</p><p>Phone: +251962386870</p></div>
+      <div class="entry"><h4>Sifen Tsegaye</h4><p>Email: kalabtsegaye@gmail.com</p><p>Phone: +251977652351</p></div>
+      <div class="entry"><h4>Tiblets Balicha</h4><p>Email: tibletsbalicha@gmail.com</p><p>Phone: +251977630683</p></div>
+      <div class="entry"><h4>Tewodros Admasu</h4><p>Email:tewodroadmasu517@gmail.com</p><p>Phone: +251938448124</p></div>
+      <div class="entry"><h4>Simret Worku</h4><p>Email: simri2119@gmail.com</p><p>Phone: +251984223530</p></div>
+      <div class="entry"><h4>Niya Adnan</h4><p>Email: NiyaAdnan113@gmail.com</p><p>Phone: +251703656109</p></div>
+      <div class="entry"><h4>Tesfaye sahle</h4><p>Email: kalkalkidan750@gmail.com</p><p>Phone: +251978388794</p></div>
+      <div class="entry"><h4>Tiruemebet siyum</h4><p>Email: tiruemebetsiyoum@gmail.com</p><p>Phone:+251939403150</p></div>
+      <div class="entry"><h4>Samuel Mitiku</h4><p>Email: Samiilee91994@gmail.com</p><p>Phone: +251977652351</p></div>
+    </div>
+    <a href="index.html" class="back-button">← Back</a>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,am',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
